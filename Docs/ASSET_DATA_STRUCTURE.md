@@ -11,7 +11,8 @@ scenes/levels/         실행 가능한 레벨 씬
 scripts/actors/        액터의 동작
 scripts/data/          Resource 타입 선언
 scripts/tools/         에셋 생성기
-docs/                  협업·규칙 문서
+Docs/                  협업·규칙 문서
+Docs/Tasks/            목표별 작업 계획과 완료 기록
 addons/                외부 Godot 플러그인
 ```
 

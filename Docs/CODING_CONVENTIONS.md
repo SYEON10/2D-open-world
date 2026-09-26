@@ -12,6 +12,7 @@
 | 내부 멤버 | `_` 접두사 | `_apply_movement()` |
 
 신호는 이미 발생한 일을 표현한다. 예: `health_changed`, `item_collected`. 공백·한글·대문자 혼합 파일명은 피한다.
+문서 경로 `Docs/Tasks/Tasks{번호}.md`는 프로젝트에서 지정한 예외다.
 
 ## GDScript 작성
 - UTF-8, LF, 마지막 줄바꿈, 탭 들여쓰기, 한 줄 100자 내외를 사용한다.
