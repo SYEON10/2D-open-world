@@ -23,7 +23,10 @@ addons/                외부 Godot 플러그인
 
    ```powershell
    & $env:GODOT_BIN --headless --path . --script res://scripts/tools/generate_cube_badge.gd
+   & $env:GODOT_BIN --headless --path . --script res://scripts/tools/generate_cube_texture.gd
    ```
+
+   두 번째 생성기는 바이너리 `cube_checker.res` 텍스처를 만든다. MCP의 리소스 조회 검증에도 사용한다.
 
 3. 외부 에셋은 `assets/source/`에 원본을 보관하고 원본 URL·작성자·라이선스·변경 사항을 같은 폴더의 `SOURCES.md`에 기록한다.
 4. `.godot/` 캐시는 커밋하지 않는다. Godot가 생성한 `.import`·`.uid` 파일은 참조 안정성을 위해 추적한다.

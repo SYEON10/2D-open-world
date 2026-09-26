@@ -4,3 +4,4 @@
 /.env
 /build/
 /.local_godot/
+/tools/mcp/node_modules/

@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://ctrmby88wh5fa"]
+
+[ext_resource type="PackedScene" path="res://scenes/actors/cube_actor.tscn" id="1_cube"]
+
+[sub_resource type="StandardMaterial3D" id="Material_floor"]
+albedo_color = Color(0.23, 0.27, 0.31, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_floor"]
+size = Vector2(30, 30)
+
+[sub_resource type="BoxShape3D" id="BoxShape_floor"]
+size = Vector3(30, 0.2, 30)
+
+[node name="CubePlayground" type="Node3D" unique_id=1052111609]
+
+[node name="CubeActor" parent="." unique_id=1023307842 instance=ExtResource("1_cube")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=996231535]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=1856300122]
+material_override = SubResource("Material_floor")
+mesh = SubResource("PlaneMesh_floor")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1083434597]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+shape = SubResource("BoxShape_floor")
+
+[node name="PlayerCamera" type="Camera3D" parent="." unique_id=1864035929]
+transform = Transform3D(1, 0, 0, 0, 0.8364627, 0.54802394, 0, -0.54802394, 0.8364627, 0, 8, 12)
+current = true
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=182896734]
+transform = Transform3D(0.87758255, 0.34391883, -0.334019, 0, 0.6967067, 0.7173561, 0.47942555, -0.6295392, 0.61141765, 0, 0, 0)
+light_energy = 1.25

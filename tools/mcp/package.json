@@ -1,0 +1,9 @@
+{
+  "name": "godot-project-mcp-runtime",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@satelliteoflove/godot-mcp": "4.1.11"
+  }
+}
