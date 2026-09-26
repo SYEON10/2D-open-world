@@ -1,0 +1,5 @@
+<type>(<scope>): <summary>
+
+# type: feat, fix, docs, refactor, perf, test, build, chore
+# summary: imperative, one line, no trailing period
+# example: feat(data): add cube movement settings
