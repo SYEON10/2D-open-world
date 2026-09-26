@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/actors/cube_actor.gd" id="1_actor"]
+[ext_resource type="Resource" path="res://data/definitions/cube_settings.tres" id="2_settings"]
+[ext_resource type="Texture2D" path="res://assets/generated/cube_badge.svg" id="3_badge"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_body"]
+size = Vector3(1, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape_body"]
+size = Vector3(1, 1, 1)
+
+[node name="CubeActor" type="CharacterBody3D"]
+script = ExtResource("1_actor")
+settings = ExtResource("2_settings")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_body")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape_body")
+
+[node name="Badge" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+pixel_size = 0.003
+texture = ExtResource("3_badge")
